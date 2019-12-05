@@ -1,0 +1,186 @@
+{
+  "____comment": "",
+  "version": "eosio::abi/1.0",
+  "types": [
+    {
+      "new_type_name": "n",
+      "type": "name"
+    },
+    {
+      "new_type_name": "a",
+      "type": "asset"
+    },
+    {
+      "new_type_name": "u",
+      "type": "uint32"
+    },
+    {
+      "new_type_name": "l",
+      "type": "uint64"
+    },
+    {
+      "new_type_name": "f",
+      "type": "float64"
+    },
+    {
+      "new_type_name": "t",
+      "type": "time_point_sec"
+    },
+    {
+      "new_type_name": "s",
+      "type": "string"
+    }
+  ],
+  "structs": [
+    {
+      "name": "empty",
+      "fields": []
+    },
+    {
+      "name": "xchsetting",
+      "fields": [
+        {
+          "name": "setting_id",
+          "type": "uint64"
+        },
+        {
+          "name": "oraclize_account",
+          "type": "name"
+        },
+        {
+          "name": "rate_timeout",
+          "type": "int32"
+        },
+        {
+          "name": "next_trade_id",
+          "type": "uint64"
+        }
+      ]
+    },
+    {
+      "name": "xchpair",
+      "fields": [
+        {"name": "pair_id", "type": "uint64"},
+        {"name": "base_currency", "type": "symbol"},
+        {"name": "quote_currency", "type": "symbol"},
+        {"name": "total_base_balance", "type": "asset"},
+        {"name": "total_quote_balance", "type": "asset"},
+        {"name": "buy_slippage", "type": "float64"},
+        {"name": "sell_slippage", "type": "float64"},
+        {"name": "price_currency", "type": "symbol"},
+        {"name": "price_type", "type": "uint32"},
+        {"name": "manager_account", "type":  "name"},
+        {"name": "price", "type": "asset"}
+      ]
+    },
+    {
+      "name": "xchtoken",
+      "fields": [
+        {"name": "token_symbol", "type":  "symbol"},
+        {"name": "token_account", "type": "name"}
+      ]
+    },
+    {
+      "name": "settingset",
+      "fields": [
+        {"name": "oraclize_account", "type": "name"},
+        {"name": "rate_timeout", "type": "int32"}
+      ]
+    },
+    {
+      "name": "addpair",
+      "fields": [
+        {"name": "base_currency", "type": "symbol"},
+        {"name": "quote_currency", "type": "symbol"},
+        {"name": "buy_slippage", "type": "float64"},
+        {"name": "sell_slippage", "type": "float64"},
+        {"name": "price_currency", "type": "symbol"},
+        {"name": "price_type", "type": "uint32"},
+        {"name": "manager_account", "type": "name"}
+      ]
+    },
+    {
+      "name": "updatepair",
+      "fields": [
+        {"name": "pair_id", "type": "uint64"},
+        {"name": "buy_slippage", "type": "float64"},
+        {"name": "sell_slippage", "type": "float64"}
+      ]
+    },
+    {
+      "name": "deletepair",
+      "fields": [
+        {"name": "pair_id", "type": "uint64"}
+      ]
+    },
+    {
+      "name": "withdraw",
+      "fields": [
+        {"name": "to", "type": "name"},
+        {"name": "pair_id", "type": "uint64"},
+        {"name": "quantity", "type": "asset"},
+        {"name": "memo", "type": "string"}
+      ]
+    },
+    {
+      "name": "addtoken",
+      "fields": [
+        {"name": "token_symbol", "type": "symbol"},
+        {"name": "token_account", "type": "name"}
+      ]
+    },
+    {
+      "name": "deletetoken",
+      "fields": [
+        {"name": "token_symbol", "type": "symbol"}
+      ]
+    },
+    {
+      "name": "logxchop",
+      "fields": [
+        {"name": "pair_id", "type": "uint64"},
+        {"name": "trade_price", "type": "float64"},
+        {"name": "quantity", "type": "asset"},
+        {"name": "buy_account", "type": "name"},
+        {"name": "sell_account", "type": "name"},
+        {"name": "trade_id", "type": "uint64"},
+        {"name": "trade_time", "type": "time_point_sec"}
+      ]
+    },
+    {
+      "name": "setprice",
+      "fields": [
+        {"name": "pair_id", "type": "uint64"},
+        {"name": "price", "type": "asset"}
+      ]
+    }
+  ],
+  "actions": [
+    {"name": "settingset", "type":  "settingset"},
+
+    {"name": "addpair", "type": "addpair"},
+    {"name": "updatepair", "type": "updatepair"},
+    {"name": "deletepair", "type": "deletepair"},
+
+    {"name": "withdraw", "type": "withdraw"},
+
+    {"name": "addtoken", "type": "addtoken"},
+    {"name": "deletetoken", "type": "deletetoken"},
+
+    {"name": "deletesttngs", "type": "empty"},
+    {"name": "deletepairs", "type": "empty"},
+    {"name": "deletetokens", "type": "empty"},
+    {"name": "deletedata", "type": "empty"},
+
+    {"name": "logxchop", "type": "logxchop"},
+
+    {"name": "setprice", "type": "setprice"}
+  ],
+  "tables": [
+    {"name":"xchsettings","type":"xchsetting","index_type":"i64","key_names": ["setting_id"],"key_types": ["uint64"]},
+    {"name":"xchpairs","type":"xchpair","index_type":"i64","key_names": ["pair_id"],"key_types": ["uint64"]},
+    {"name":"xchtokens","type":"xchtoken","index_type":"i64","key_names":["token_symbol"],"key_types":["uint64"]}
+  ],
+  "ricardian_clauses": [],
+  "abi_extensions": []
+}

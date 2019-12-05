@@ -1,0 +1,1 @@
+/usr/bin/eosio-ld -rdynamic CMakeFiles/eosio.bios.wasm.dir/src/eosio.bios.o -o eosio.bios.wasm 

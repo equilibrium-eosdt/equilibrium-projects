@@ -1,0 +1,72 @@
+{
+  "____comment": "",
+  "version": "eosio::abi/1.0",
+  "types": [
+    {
+      "new_type_name": "n",
+      "type": "name"
+    },
+    {
+      "new_type_name": "a",
+      "type": "asset"
+    },
+    {
+      "new_type_name": "u",
+      "type": "uint32"
+    },
+    {
+      "new_type_name": "l",
+      "type": "uint64"
+    },
+    {
+      "new_type_name": "f",
+      "type": "float64"
+    },
+    {
+      "new_type_name": "t",
+      "type": "time_point_sec"
+    },
+    {
+      "new_type_name": "s",
+      "type": "string"
+    }
+  ],
+  "structs": [
+    {
+      "name": "empty",
+      "fields": []
+    },
+    {
+      "name": "grdopers",
+      "fields": [
+        {"name": "operation_id", "type": "l"},
+        {"name": "account", "type": "n"},
+        {"name": "initial_value", "type":  "a"},
+        {"name": "liq_excess", "type":  "a"},
+        {"name": "liq_value", "type": "a"},
+        {"name": "exchange_value", "type":  "a"}
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "name": "createxchng",
+      "type": "empty"
+    },
+    {
+      "name": "transferback",
+      "type": "empty"
+    }
+  ],
+  "tables": [
+    {
+      "name": "grdopers",
+      "type": "grdopers",
+      "index_type": "i64",
+      "key_names": ["operation_id"],
+      "key_types": ["uint64"]
+    }
+  ],
+  "ricardian_clauses": [],
+  "abi_extensions": []
+}

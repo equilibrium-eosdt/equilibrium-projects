@@ -1,0 +1,7 @@
+node_modules
+tests/build
+*.wasm
+*.abi.backup
+*-wd
+.idea
+.vscode

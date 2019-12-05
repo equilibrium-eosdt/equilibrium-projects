@@ -1,0 +1,3 @@
+/home/nstupin/plt-eoscdt-contract/contracts/eosio.bios/CMakeFiles/rebuild_cache.dir
+/home/nstupin/plt-eoscdt-contract/contracts/eosio.bios/CMakeFiles/eosio.bios.wasm.dir
+/home/nstupin/plt-eoscdt-contract/contracts/eosio.bios/CMakeFiles/edit_cache.dir

@@ -1,0 +1,101 @@
+{
+  "____comment": "",
+  "version": "eosio::abi/1.0",
+  "types": [
+    {
+      "new_type_name": "n",
+      "type": "name"
+    },
+    {
+      "new_type_name": "a",
+      "type": "asset"
+    },
+    {
+      "new_type_name": "u",
+      "type": "uint32"
+    },
+    {
+      "new_type_name": "l",
+      "type": "uint64"
+    },
+    {
+      "new_type_name": "f",
+      "type": "float64"
+    },
+    {
+      "new_type_name": "t",
+      "type": "time_point_sec"
+    },
+    {
+      "new_type_name": "s",
+      "type": "string"
+    }
+  ],
+  "structs": [
+    {
+      "name": "empty",
+      "fields": []
+    },
+    {
+      "name": "parameter",
+      "base": "",
+      "fields": [
+        {
+          "name": "parameter_id",
+          "type": "l"
+        },
+        {
+          "name": "surplus_debt",
+          "type": "a"
+        },
+        {
+          "name": "bad_debt",
+          "type": "a"
+        },
+        {
+          "name": "rate",
+          "type": "f"
+        }
+      ]
+    },
+    {
+      "name": "setparams",
+      "base": "",
+      "fields": [
+        {
+          "name": "surplus_debt",
+          "type": "a"
+        },
+        {
+          "name": "bad_debt",
+          "type": "a"
+        },
+        {
+          "name": "rate",
+          "type": "f"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "name": "setparams",
+      "type": "setparams"
+    }
+  ],
+  "tables": [
+    {
+      "name": "parameters",
+      "type": "parameter",
+      "index_type": "i64",
+      "key_names": [
+        "parameter_id"
+      ],
+      "key_types": [
+        "uint64"
+      ]
+    }
+  ],
+  "ricardian_clauses": [],
+  "abi_extensions": []
+}

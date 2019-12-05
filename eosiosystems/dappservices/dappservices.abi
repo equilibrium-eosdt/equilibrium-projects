@@ -1,0 +1,876 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "account",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "accountext",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "quota",
+                    "type": "asset"
+                },
+                {
+                    "name": "balance",
+                    "type": "asset"
+                },
+                {
+                    "name": "last_usage",
+                    "type": "uint64"
+                },
+                {
+                    "name": "last_reward",
+                    "type": "uint64"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "pending_package",
+                    "type": "name"
+                },
+                {
+                    "name": "package_started",
+                    "type": "uint64"
+                },
+                {
+                    "name": "package_end",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "claimrewards",
+            "base": "",
+            "fields": [
+                {
+                    "name": "provider",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "close",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "symbol",
+                    "type": "symbol_code"
+                }
+            ]
+        },
+        {
+            "name": "closeprv",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "maximum_supply_amount",
+                    "type": "uint64"
+                },
+                {
+                    "name": "inflation_per_block",
+                    "type": "float64"
+                },
+                {
+                    "name": "inflation_starts_at",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "currency_stats",
+            "base": "",
+            "fields": [
+                {
+                    "name": "supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "max_supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "issuer",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "currency_stats_ext",
+            "base": "",
+            "fields": [
+                {
+                    "name": "staked",
+                    "type": "asset"
+                },
+                {
+                    "name": "inflation_per_block",
+                    "type": "float64"
+                },
+                {
+                    "name": "last_inflation_ts",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "disablepkg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package_id",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "enablepkg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package_id",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "issue",
+            "base": "",
+            "fields": [
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "migratestake",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "modifypkg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package_id",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "api_endpoint",
+                    "type": "string"
+                },
+                {
+                    "name": "package_json_uri",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "open",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "symbol",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "ram_payer",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "package",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "api_endpoint",
+                    "type": "string"
+                },
+                {
+                    "name": "package_json_uri",
+                    "type": "string"
+                },
+                {
+                    "name": "package_id",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "quota",
+                    "type": "asset"
+                },
+                {
+                    "name": "package_period",
+                    "type": "uint32"
+                },
+                {
+                    "name": "min_stake_quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "min_unstake_period",
+                    "type": "uint32"
+                },
+                {
+                    "name": "enabled",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "refreceipt",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "refund",
+            "base": "",
+            "fields": [
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "symcode",
+                    "type": "symbol_code"
+                }
+            ]
+        },
+        {
+            "name": "refundreq",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "unstake_time",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "refundto",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "symcode",
+                    "type": "symbol_code"
+                }
+            ]
+        },
+        {
+            "name": "regpkg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "newpackage",
+                    "type": "package"
+                }
+            ]
+        },
+        {
+            "name": "retire",
+            "base": "",
+            "fields": [
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "reward",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                },
+                {
+                    "name": "last_usage",
+                    "type": "uint64"
+                },
+                {
+                    "name": "total_staked",
+                    "type": "asset"
+                },
+                {
+                    "name": "last_inflation_ts",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "selectpkg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "stake",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "staketo",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "staking",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "balance",
+                    "type": "asset"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "unstake",
+            "base": "",
+            "fields": [
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "unstaketo",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "usage",
+            "base": "",
+            "fields": [
+                {
+                    "name": "usage_report",
+                    "type": "usage_t"
+                }
+            ]
+        },
+        {
+            "name": "usage_t",
+            "base": "",
+            "fields": [
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "payer",
+                    "type": "name"
+                },
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "success",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "xsignal",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "action",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "signalRawData",
+                    "type": "bytes"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "claimrewards",
+            "type": "claimrewards",
+            "ricardian_contract": "As an authorized party, I {{ signer }} wish to have the rewards earned by {{ provider }} deposited into the {{ provider }} account."
+        },
+        {
+            "name": "close",
+            "type": "close",
+            "ricardian_contract": "As an authorized party I {{ signer }} wish to free the memory associated with the balance of {{owner}} {{symbol}} tokens."
+        },
+        {
+            "name": "closeprv",
+            "type": "closeprv",
+            "ricardian_contract": "As an authorized party I {{ signer }} wish to free the memory associated with the data associated with the {{service}} from {{provider}}."
+        },
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": "The DAPP token created will have a maximum supply of {{maximum_supply_amount}}. The inflation per block rate is {{inflation_per_block}} and the inflation will start at {{inflation _starts_at}} epoch time (ms)."
+        },
+        {
+            "name": "disablepkg",
+            "type": "disablepkg",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "enablepkg",
+            "type": "enablepkg",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "issue",
+            "type": "issue",
+            "ricardian_contract": "As an authorized party I {{ signer }} wish to issue {{quantity}} amount of DAPP Token/s to {{to}} with the following memo: {{memo}}."
+        },
+        {
+            "name": "migratestake",
+            "type": "migratestake",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "modifypkg",
+            "type": "modifypkg",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "open",
+            "type": "open",
+            "ricardian_contract": "As an authorized party I {{ signer }} wish to allocate memory from {{ram_payer}} for the purpose of opening balance for the  {{symbol}} token in the {{owner}} account."
+        },
+        {
+            "name": "refreceipt",
+            "type": "refreceipt",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "refund",
+            "type": "refund",
+            "ricardian_contract": "As an authorized party I {{ signer }} wish to have the unstaked {{symcode}} tokens of {{ to }} previously staked to {{service}} of {{ provider } returned to {{ to }}."
+        },
+        {
+            "name": "refundto",
+            "type": "refundto",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "regpkg",
+            "type": "regpkg",
+            "ricardian_contract": "The intent of the REGPKG action is to enable the registration of a potential Service Package to be provided by a DAPP Service Provider (“PKG” and ”DSP”, respectively).\nOnce the action is completed, a DSP’s PKG will be registered in the DAPP Token Smart Contract, enabling users to select it (via SelectPKG action) and use it (via Stake action).\n“Registered PKG” means a PKG that is registered under REGPKG action;\n\nA Registered PKG is comprised of these minimum core elements, which are provided by the DSP (the “PKG Properties”):\n\nPKG ID: {{newpackage.package_id}}\n\nPKG provided by {{newpackage.provider}}\nDSP API address: {{newpackage.api_endpoint}}\n\nPKG service type: {{newpackage.service}}\nPKG service type amount (quota) {{newpackage.qouta}}\n\nPKG specifications, as declared by the DAPP Service Provider and included herein by reference: {{newpackage.package_json_uri}}\n\nThe required amount of time the tokens must remain staked (locked) to enable the PKG: {{newpackage.min_unstake_period}}\n\nWhat is the duration of the PKG: {{newpackage.package_period}}\nHow many DAPP Tokens needed to be staked in order to use the PKG: {{newpackage.min_stake_quantity}}\n\nSince the DAPP Network is built, operated and developed by its users, it is upon community members to set for themselves whatever terms will apply to transactions on the DAPP Network. Having said that, as a service to the DAPP Network at its early stage and for guidance, LiquidApps can propose the following frame for the regpkg Contract: \n\nI, {{newpackage.provider}} (the “DSP”), hereby state my interest and readiness to provide that certain Registered PKG to DAPP Token users, utilizing the DAPP Token and related smart contracts deployed on the EOS blockchain (the “DAPP Network”).\nWith respect to the Registered PKG, DSP confirms that:\nIt has validated the PKG Properties and that it is capable of supplying the Registered PKG under the PKG Properties.\nOther than as stated in the PKG Properties (specifically, the minimum amount of DAPP Tokens that must be staked to use the PKG: {{newpackage.min_stake_quantity}}), the use of the PKG is not subjected to or conditioned upon any terms.\nThe {{newpackage.provider}} will keep his servers maintained and secured, with only the DSP having access to features connected with the PKG and services provided.\nshould the DSP use, within the course of providing the services under the PKG, any technique, code or smart contract developed, amended, adapted, upgraded or otherwise altered by the DSP, DSP accepts liability for any and all provable damages that result from such actions of the DSP, unless specifically stated otherwise.  \nIt will not interfere with, harm, infringe, breach or otherwise abuse the DAPP Network, its ongoing operations, related terms and conditions (as may be applicable) and any of its users rights.\nI agree to process all producer election transactions that occur in blocks I create, to sign all objectively valid blocks I create that contain election transactions, and to sign all pre-confirmation and confirmations necessary to facilitate the transfer of control to the next set of producers as determined by the system contract.\nDSP’s offering and/or supplying of PKG’s will not subject DSP to any limitations, other than explicitly set forth herein. \nShould DSP maintain a website related to the PKG’s which contains supported by the DSP, DSP may include at its sole discretion additional terms and conditions applicable to DSP’s services.\nDSP is providing PKG and services on its own account while understanding all risks and liabilities and by providing PKG agrees and accepts the applicable terms of the complete DAPP Token Purchase Agreement and its annexes available at https://www.liquidapps.io/ including the DAPP Token White Paper available at https://www.liquidapps.io/ (the “Transaction Documents”)."
+        },
+        {
+            "name": "retire",
+            "type": "retire",
+            "ricardian_contract": "As an authorized party I {{ signer }} wish to retire {{quantity}} tokens out of the total supply with the following memo: {{memo}}."
+        },
+        {
+            "name": "selectpkg",
+            "type": "selectpkg",
+            "ricardian_contract": "As an authorized party I {{ signer }}, certify the following to be true to the best of my knowledge:\n \nAs an authorized party, I {{ signer }} declare that I have read the description of the {{provider}} and the {{package}} I choose to select.\nI agree to any contractual terms & conditions with respect to {{package}} in the specific {{service}} set forth and/or published by the {{provider}}, and accept that the use of the {{package}} and/or {{service}} shall be governed by such terms. \nI understand that this action by itself will entitle or grant me any right or claim, and the right and ability to use {{package}} and/or {{service}} will be enabled only when I have invoked <staked> of sufficient DAPP tokens in {{owner}} account as described in the specific {{package}}.\nIf a {{package}} is selected while having sufficient amount of staked DAPP tokens, this action will lock in {{owner}} staked token for the period of time defined in the {{package}}."
+        },
+        {
+            "name": "stake",
+            "type": "stake",
+            "ricardian_contract": "As an authorized party I {{ signer }} wish to stake {{ quantity }} for a {{ service }} from {{ provider }} the liquid tokens of {{ from }} will be staked to the {{ provider }} for the specific {{ service }}.\nIf you have invoked selectpkg and have sufficient {{ quantity }} DAPP tokens staked to the {{service}} of the {{provider}}, this action will lock in {{from}} staked token for the period of time defined in the specific {{service}} of the {{provider}} as defined in the package.\nBy executing and approving this stake, I hereby irrevocably and unconditionally represent and confirm all the following:\nI am the owner of the the DAPP tokens used in executing this stake (if for myself), or have all requisite authorization and power to use this account and DAPP tokens used for this stake (if for an entity or person I represent);\nMy use of this account and DAPP tokens for executing this stake. is lawful and does not impair or in breach of any third-party rights;"
+        },
+        {
+            "name": "staketo",
+            "type": "staketo",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": "I, {{from}}, certify the following to be true to the best of my knowledge:\n \nI have disclosed any contractual terms & conditions with respect to {{quantity}} to {{to}} as may be applicable.\nI understand that funds transfers are not reversible after the {{transaction.delay}} seconds or other delays as configured by {{from}}'s permissions.\nBy executing and approving this transfer, I hereby irrevocably and unconditionally represent and confirm all the following:\nI am the owner of the {{quantity}} DAPP tokens used in executing this transfer (if for myself), or have all requisite authorization and power to use this account and {{quantity}} DAPP tokens used for this transfer (if for an entity or person I represent);\nMy use of this account and {{quantity}} DAPP tokens for executing this transfer. is lawful and does not impair or in breach of any third-party rights;"
+        },
+        {
+            "name": "unstake",
+            "type": "unstake",
+            "ricardian_contract": "As an authorized party I {{ signer }} hereby unstake {{ quantity }} from {{ provider }}. .\nBy executing and approving this unstake, I hereby irrevocably and unconditionally represent and confirm all the following:\nI am the owner of the the DAPP tokens used in executing this unstake (if for myself), or have all requisite authorization and power to use this account and DAPP tokens used for this unstake (if for an entity or person I represent);\nMy use of this account and DAPP tokens for executing this unstake. is lawful and does not impair or in breach of any third-party rights;"
+        },
+        {
+            "name": "unstaketo",
+            "type": "unstaketo",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "usage",
+            "type": "usage",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xsignal",
+            "type": "xsignal",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "accountext",
+            "type": "accountext",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "accounts",
+            "type": "account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "package",
+            "type": "package",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "refunds",
+            "type": "refundreq",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "reward",
+            "type": "reward",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "staking",
+            "type": "staking",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "stat",
+            "type": "currency_stats",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "statext",
+            "type": "currency_stats_ext",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}

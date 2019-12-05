@@ -1,0 +1,25 @@
+{
+    "name": "equilibrium-exchange",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "./test.sh"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@equilab/exchange": "^1.0.2",
+        "@types/node-fetch": "^2.5.2",
+        "@types/text-encoding": "0.0.35",
+        "bignumber.js": "^9.0.0",
+        "chalk": "^2.4.2",
+        "elliptic": "^6.5.1",
+        "eosjs": "^20.0.0",
+        "node-fetch": "^2.6.0",
+        "text-encoding": "^0.7.0",
+        "tslint": "^5.20.0",
+        "typescript": "^3.7.3"
+    }
+}

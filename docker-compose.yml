@@ -1,0 +1,12 @@
+version: '2'
+services:
+  exchange:
+    build:
+      context: ./build
+    container_name: exchange
+    ports:
+      - "8888:8888"
+    volumes:
+      - './eosiosystems:/eosiosystems'
+      - './contracts:/contracts'
+      - './eosdtscripts:/eosdtscripts'
